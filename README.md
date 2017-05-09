@@ -8,6 +8,6 @@
 ## Модель потока данных при работе пользователя с графическим интерфейсом
 Приведена графическая интерпретация упрощенной модели потока данных.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "DataFlow")
+![alt text](https://github.com/AlexMedvedeva/MultidimensionalOptimization/blob/master/DataFlow.jpg "DataFlow")
 
 ## Работа пользователя, как разработчика
