@@ -2,7 +2,7 @@
 
 #include <string>
 
-struct stringArray
+struct StringArray
 {
   int n;
   std::string* data;

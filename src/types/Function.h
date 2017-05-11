@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "../utils/stringArray.h"
+#include "../utils/StringArray.h"
 
 namespace NumericalMethods
 {
@@ -29,7 +29,7 @@ namespace NumericalMethods
     double(*f)(double, int, double*);
     double(*df)(double, int, double*);
     std::string name;
-    stringArray params;
+    StringArray params;
 
   };
 }

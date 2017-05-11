@@ -4,7 +4,7 @@
 #include <iterator>
 
 #include "function.h"
-#include "utils\stringArray.h"
+#include "utils\StringArray.h"
 
 namespace NumericalMethods
 {
@@ -15,7 +15,7 @@ namespace NumericalMethods
   public:
 
     void add(const Function& f);
-    stringArray& getNames();
+    StringArray& getNames();
     Function& getFunction(std::string& name);
 
   private:
