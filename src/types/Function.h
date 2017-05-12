@@ -13,7 +13,7 @@ namespace NumericalMethods
 
   public:
 
-    Function(std::string name, stringArray params, double(*f)(double, int, double*), double(*df)(double, int, double*))
+    Function(std::string name, StringArray params, double(*f)(double, int, double*), double(*df)(double, int, double*))
     {
       this->f = f;
       this->df = df;

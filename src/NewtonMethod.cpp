@@ -8,9 +8,9 @@ namespace
   class NewtonMethod_impl : public virtual NewtonMethod
   {
 
-    virtual Error solve(const Any input_data, const Any params, Any* output_data, Any* extra);
-    virtual std::string getDialogWindow();
-    virtual std::string getResultWindow();
+    virtual Error solve(const Any& input_data, const Any& params, Any* output_data, Any* extra);
+    virtual std::string& getDialogWindow();
+    virtual std::string& getResultWindow();
 
   };
 
@@ -26,7 +26,7 @@ namespace NumericalMethods
 
 };
 
-Error NewtonMethod_impl::solve(const Any input_data, const Any params, Any* output_data, Any* extra)
+Error NewtonMethod_impl::solve(const Any& input_data, const Any& params, Any* output_data, Any* extra)
 {
   NewtonInputData data = input_data.cast<NewtonInputData>();
   NewtonParams p = params.cast<NewtonParams>();
@@ -36,12 +36,12 @@ Error NewtonMethod_impl::solve(const Any input_data, const Any params, Any* outp
   return Error::RC_OK;
 }
 
-std::string NewtonMethod_impl::getDialogWindow()
+std::string& NewtonMethod_impl::getDialogWindow()
 {
-  return "";
+  return *new std::string();
 }
 
-std::string NewtonMethod_impl::getResultWindow()
+std::string& NewtonMethod_impl::getResultWindow()
 {
-  return "";
+  return *new std::string();
 }

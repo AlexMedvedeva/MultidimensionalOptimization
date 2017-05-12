@@ -27,6 +27,8 @@ private:
 
 public:
 
+  class BadCast : public std::exception {};
+
   Any() : _universal(nullptr) {}
   template <typename T>
   Any(const T& t) : _universal(new container_impl<T>(t)) {}
@@ -50,19 +52,19 @@ public:
   bool empty() const { return !_universal; }
 
   template <typename T>
-  T& cast() const {
-    ContainerImpl<T>* containerImpl = dynamic_cast<ContainerImpl<T>*>(container);
+  T& cast() {
+    container_impl<T>* containerImpl = dynamic_cast<container_impl<T>*>(_universal);
     if (!containerImpl)
       throw BadCast();
-    return containerImpl->value;
+    return containerImpl->_t;
   }
 
   template <typename T>
   const T& cast() const {
-    ContainerImpl<T>* containerImpl = dynamic_cast<ContainerImpl<T>*>(container);
+    container_impl<T>* containerImpl = dynamic_cast<container_impl<T>*>(_universal);
     if (!containerImpl)
       throw BadCast();
-    return containerImpl->value;
+    return containerImpl->_t;
   }
 
 };

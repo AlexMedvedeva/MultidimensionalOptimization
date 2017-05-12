@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iterator>
+
 #include "Vector.h"
 #include "types\FieldElement.h"
 
@@ -12,7 +14,7 @@ namespace NumericalMethods
   public:
 
     Compact(const Vector& s, const Vector& e, const Vector& h) :start(s), end(e), step(h) {}
-    Compact(const Compact& other) {};
+    Compact(const Compact& other) :start(other.start), end(other.end), step(other.step){};
 
     bool isInCompact(const Vector& v) const;
     Compact& intersect(const Compact& other) const;
@@ -26,7 +28,7 @@ namespace NumericalMethods
 
     public:
 
-      compactIterator(FieldElement* x) :current(x);
+      compactIterator(Vector* x) :current(x) {}
       compactIterator(const compactIterator& mit);
 
       compactIterator& operator++();
