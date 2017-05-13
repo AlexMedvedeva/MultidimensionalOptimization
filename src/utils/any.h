@@ -3,7 +3,7 @@
 #include <typeinfo>
 #include <stdexcept>
 
-class Any 
+class Any
 {
 
 private:
@@ -27,9 +27,9 @@ private:
 
 public:
 
-  class BadCast : public std::exception {};
+  class BadCast {};
 
-  Any() : _universal(nullptr) {}
+  Any() : _universal(NULL) {}
   template <typename T>
   Any(const T& t) : _universal(new container_impl<T>(t)) {}
   Any& operator = (const Any& other)
@@ -37,7 +37,7 @@ public:
     if (other._universal)
       _universal = other._universal->clone();
     else
-      _universal = nullptr;
+      _universal = NULL;
     return *this;
   }
   Any(const Any& other)
@@ -45,7 +45,7 @@ public:
     if (other._universal)
       _universal = other._universal->clone();
     else
-      _universal = nullptr;
+      _universal = NULL;
   }
   ~Any() { delete _universal; }
   const std::type_info& getType() const { return _universal->getType(); }

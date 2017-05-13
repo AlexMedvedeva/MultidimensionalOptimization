@@ -1,9 +1,14 @@
 #pragma once
 
-#include <string>
+#include "String.h"
 
 struct StringArray
 {
-  int n;
-  std::string* data;
+  size_t n;
+  String* data;
+  ~StringArray()
+  {
+      delete[] data;
+      data = NULL;
+  }
 };

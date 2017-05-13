@@ -1,5 +1,7 @@
 #pragma once
 
+#include <typeinfo>
+
 #include "types/FieldElement.h"
 
 namespace NumericalMethods
@@ -15,14 +17,17 @@ namespace NumericalMethods
     Vector(int n, const Vector& other);
     ~Vector();
 
-    FieldElement& operator [] (int i) const;
-    void operator () (int i, const FieldElement& value);
+    FieldElement& get(int i) const;
+    void set(int i, const FieldElement& value);
     int length() const;
+    bool compare(Vector& other) const;
 
     Vector& operator = (const Vector& other);
     bool operator == (const Vector& other) const;
     Vector& operator + (const Vector& other) const;
+    Vector& operator += (const Vector& other);
     Vector& operator - (const Vector& other) const;
+    Vector& operator -= (const Vector& other);
     Vector& operator - () const;
     FieldElement& operator * (const Vector& other) const;
     static Vector& crossProduct(const Vector& v1, const Vector& v2);

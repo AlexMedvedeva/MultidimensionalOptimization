@@ -1,5 +1,5 @@
 #pragma once
 
-enum class Error {
+typedef enum {
   RC_OK
-};
+} Error;

@@ -1,8 +1,7 @@
 #ifndef SET_H
 #define SET_H
 
-#include "types/Element.h"
-#include <iterator>
+#include "types/Ordered.h"
 
 namespace NumericalMethods
 {
@@ -13,19 +12,23 @@ namespace NumericalMethods
 
     bool operator == (const Set &set) const;
 
-    bool contain(const Element &element) const;
-    void add(const Element &element);
-    void remove(const Element &element);
+    bool contain(const Ordered &element) const;
+    void add(const Ordered &element);
+    void remove(const Ordered &element);
 
     Set& intersect(const Set& other) const;
+    void intersectWith(const Set& other);
     Set& unite(const Set& other) const;
-    Set& difference(const Set& other) const;
-    Set& symmetricDifference(const Set& other) const;
+    void initeWith(const Set& other);
+    Set& subtract(const Set& other) const;
+    void subtractWith(const Set& other);
+    Set& symmetricSubtract(const Set& other) const;
+    void symmetricSubtractWith(const Set& other);
     bool isSubset(const Set& set) const;
 
     int size() const;
 
-    class setIterator : public std::iterator<std::input_iterator_tag, Element>
+    class setIterator
     {
 
     public:
@@ -38,7 +41,7 @@ namespace NumericalMethods
 
       bool operator== (const setIterator& rhs);
       bool operator!= (const setIterator& rhs);
-      Element& operator*();
+      Ordered& operator*();
 
     };
 

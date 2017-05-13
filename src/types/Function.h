@@ -1,9 +1,6 @@
 #pragma once
 
-#include <string>
-#include <vector>
-
-#include "../utils/StringArray.h"
+#include "../utils/String.h"
 
 namespace NumericalMethods
 {
@@ -13,12 +10,11 @@ namespace NumericalMethods
 
   public:
 
-    Function(std::string name, StringArray params, double(*f)(double, int, double*), double(*df)(double, int, double*))
+    Function(String metaData, double(*f)(double, int, double*), double(*df)(double, int, double*))
     {
       this->f = f;
       this->df = df;
-      this->name = name;
-      this->params = params;
+      this->metaData = metaData;
     }
 
     double operator () (double x, int n, double* params) const { return f(x, n, params); }
@@ -28,8 +24,7 @@ namespace NumericalMethods
 
     double(*f)(double, int, double*);
     double(*df)(double, int, double*);
-    std::string name;
-    StringArray params;
+    String metaData;
 
   };
 }

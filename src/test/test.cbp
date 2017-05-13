@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="..\Compact.h" />
+		<Unit filename="..\Error.h" />
+		<Unit filename="..\Functions.h" />
+		<Unit filename="..\NewtonMethod.cpp" />
+		<Unit filename="..\NewtonMethod.h" />
+		<Unit filename="..\Set.h" />
+		<Unit filename="..\Solver.h" />
+		<Unit filename="..\Vector.h" />
+		<Unit filename="..\main.cpp" />
+		<Unit filename="..\types\Double.h" />
+		<Unit filename="..\types\FieldElement.h" />
+		<Unit filename="..\types\Function.h" />
+		<Unit filename="..\types\Integer.h" />
+		<Unit filename="..\types\Object.h" />
+		<Unit filename="..\types\Ordered.h" />
+		<Unit filename="..\utils\Log.h" />
+		<Unit filename="..\utils\String.h" />
+		<Unit filename="..\utils\StringArray.h" />
+		<Unit filename="..\utils\any.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

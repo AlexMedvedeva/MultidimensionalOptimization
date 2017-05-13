@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="..\Error.h" open="1" top="0" tabpos="15">
+		<Cursor position="43" topLine="0" />
+	</File>
+	<File name="..\Functions.h" open="1" top="0" tabpos="2">
+		<Cursor position="100" topLine="0" />
+	</File>
+	<File name="..\NewtonMethod.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="602" topLine="0" />
+	</File>
+	<File name="..\NewtonMethod.h" open="1" top="0" tabpos="14">
+		<Cursor position="718" topLine="6" />
+	</File>
+	<File name="..\Set.h" open="1" top="0" tabpos="3">
+		<Cursor position="1022" topLine="13" />
+	</File>
+	<File name="..\Solver.h" open="1" top="0" tabpos="13">
+		<Cursor position="326" topLine="0" />
+	</File>
+	<File name="..\Vector.h" open="1" top="0" tabpos="1">
+		<Cursor position="411" topLine="2" />
+	</File>
+	<File name="..\types\Double.h" open="1" top="0" tabpos="10">
+		<Cursor position="651" topLine="0" />
+	</File>
+	<File name="..\types\FieldElement.h" open="1" top="0" tabpos="4">
+		<Cursor position="93" topLine="0" />
+	</File>
+	<File name="..\types\Function.h" open="1" top="0" tabpos="6">
+		<Cursor position="600" topLine="0" />
+	</File>
+	<File name="..\types\Integer.h" open="1" top="0" tabpos="9">
+		<Cursor position="660" topLine="0" />
+	</File>
+	<File name="..\types\Object.h" open="1" top="0" tabpos="5">
+		<Cursor position="139" topLine="0" />
+	</File>
+	<File name="..\types\Ordered.h" open="1" top="0" tabpos="11">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="..\utils\Log.h" open="1" top="0" tabpos="16">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="..\utils\String.h" open="1" top="0" tabpos="17">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="..\utils\StringArray.h" open="1" top="1" tabpos="18">
+		<Cursor position="155" topLine="0" />
+	</File>
+	<File name="..\utils\any.h" open="1" top="0" tabpos="8">
+		<Cursor position="877" topLine="25" />
+	</File>
+</CodeBlocks_layout_file>

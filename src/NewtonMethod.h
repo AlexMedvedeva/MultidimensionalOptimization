@@ -1,9 +1,9 @@
 #pragma once
 
 #include <Windows.h>
-#include <string>
 
 #include "Solver.h"
+#include "Error.h"
 #include "types/Function.h"
 
 #ifdef BUILD_DLL
@@ -38,9 +38,8 @@ namespace NumericalMethods
 
   public:
 
-    virtual Error solve(const Any& input_data, const Any& params, Any* output_data, Any* extra) = 0;
-    virtual std::string& getDialogWindow() = 0;
-    virtual std::string& getResultWindow() = 0;
+    virtual Error solve(const Any& input_data, const Any& params, Any& output_data, Log* log = NULL) = 0;
+    virtual String& getDialogMetaData() = 0;
 
   };
 
